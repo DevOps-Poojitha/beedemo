@@ -5,13 +5,14 @@ pipeline  {
       steps  {
          script  {
             bat  "mvn clean install"
+            echo  "Stage 1 Completed"
             }
           }
         }
      stage("stage2")  {
       steps  {
-         echo "On stage 2"
-          sleep 5
+         script  {
+            bat  "mvn clean install"
             }
           }
         }
